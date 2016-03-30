@@ -1,17 +1,21 @@
 {
-  "name": "prestashop-starter-theme-dev-tools",
-  "version": "0.0.1",
-  "description": "Tools to help while developing the starter theme",
-  "main": "index.js",
+  "name": "front-end-starter",
+  "version": "1.0.0",
+  "description": "Simple front-end-starter",
+  "main": "index.html",
   "scripts": {
-    "watch": "stylus --watch",
-    "build": "stylus --compress --sourcemap --include-css css/dev.styl -o ../assets/css",
-    "watch-build": "stylus --watch --compress --sourcemap --include-css css/dev.styl -o ../assets/css"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Lucas Martin",
   "license": "ISC",
   "devDependencies": {
-    "stylus": "^0.52.4",
-    "webpack": "^1.12.2"
+    "gulp": "^3.9.0"
+  },
+  "dependencies": {
+    "bower": "^1.7.7",
+    "gulp-concat": "^2.6.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-sass": "^2.1.1",
+    "gulp-watch": "^4.3.5"
   }
 }
