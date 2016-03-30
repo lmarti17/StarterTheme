@@ -54,8 +54,8 @@ Now the dependencies are installed and correctly set up, you can customise these
 
 > If you need to add image files, you can create `img` folder in `_dev` folder.
 
-As stylesheets and javascript files are compiled and minified, you may wonder how to 
-build new version of theses files after your modifications. You can use npm to check 
+As stylesheets and javascript files are compiled and minified, you may wonder how to
+build new version of theses files after your modifications. You can use npm to check
 for any update and update the production version used by PrestaShop (localized in `assets` folder).
 
 ```bash
@@ -79,10 +79,19 @@ Themes architecture has changed a lot since PrestaShop 1.7.
 │   └── theme.yml
 ├── CONTRIBUTING.md
 ├── _dev/
-│   ├── css/
+│   ├── assets/
+│   ├── fonts/
+│   ├── sass/
+│   │   └── views/
+│   ├── stylesheets/
+│   │   └── app.css
 │   ├── js/
-│   ├── package.json
-│   └── webpack.config.js
+│   │   ├── app/
+│   │   └── dist/
+│   ├── .gitignore
+│   ├── dev-readme.md
+│   ├── gulpfile.js
+│   └── package.json
 ├── modules/
 ├── plugins/
 ├── preview.png
@@ -102,14 +111,14 @@ Themes architecture has changed a lot since PrestaShop 1.7.
 ```
 
 | Folder | Description |
-|-------:|------------| 
-| `assets` | Contains all "UI" data of your theme: javascripts, stylesheets and images; | 
-| `config` | Contains the configuration file of your theme; | 
-| `_dev` | Contains all the development assets; | 
-| `modules` | Allow you to override templates for modules, take a look at `classic` | theme; | 
-| `plugins` | Contains the Smarty extensions required by the theme, if any; | 
-| `templates` | Contains the templates of the theme, ordered by domain categories | 
-| `preview.png` | Should be a thumbnail of your theme homepage, displayed in the back office | 
+|-------:|------------|
+| `assets` | Contains all "UI" data of your theme: javascripts, stylesheets and images; |
+| `config` | Contains the configuration file of your theme; |
+| `_dev` | Contains all the development assets; |
+| `modules` | Allow you to override templates for modules, take a look at `classic` | theme; |
+| `plugins` | Contains the Smarty extensions required by the theme, if any; |
+| `templates` | Contains the templates of the theme, ordered by domain categories |
+| `preview.png` | Should be a thumbnail of your theme homepage, displayed in the back office |
 
 ## Contributing
 
@@ -119,7 +128,7 @@ Take a look at our [Contributing guide](CONTRIBUTING.md)
 
 You may wonder how to access the latest features from this theme when you already have used and modified it.
 
-You may apply a patch with the commits but most of the time, you will have to deal with conflicts because you 
+You may apply a patch with the commits but most of the time, you will have to deal with conflicts because you
 will have updated `assets` and `templates`.
 
 We will provide explicit changelogs with new features, fixes and impacted files to help you keep your [fork up to date](https://help.github.com/articles/syncing-a-fork/)
